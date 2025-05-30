@@ -1,22 +1,35 @@
-#movie-result {
-  background: rgb(244, 98, 181);
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Griffy&family=Henny+Penny&display=swap');
+#one-result {
+  background: rgb(171, 219, 255);
   border: 5px solid black;
   font-size: 24px;
-  height: 160px;
+  height: 80px;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-#book-result {
-  background: rgb(196, 159, 255);
+#two-result {
+  background: rgb(171, 219, 255);
   border: 5px solid black;
   font-size: 24px;
-  height: 160px;
+  height: 80px;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
 hr {
   height: 5px;
-  background-color: black;
+  background-color: rgb(251, 159, 252);
+}
+
+body {
+  background-color: rgb(255, 236, 184);
+  font-family: "Henny Penny", system-ui;
+  color: rgb(133, 115, 255);
+}
+
+h1{
+  color: rgb(251, 159, 252);
+  font-family: "Henny Penny", system-ui;
 }

@@ -1,12 +1,12 @@
 <!-- Unit 13 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
-[  ] Two Different jQuery Animation Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[ si ] Two Interactive Drop-down Inputs 
+[ si ] Two Different jQuery Animation Methods 
+[  si] Add Five CSS Declarations
+[ si ] Include Three Images
 
 Select ONE Additional Feature to Add  
-[ no ] Feature 1 - Google Font
+[ si] Feature 1 - Google Font
 [ no ] Feature 2 - Upload a Font
 [ no ] Feature 3 - .mouseover() Method
 [ no ] Feature 4 - :hover Feature 
@@ -21,66 +21,83 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>CATS🐈🐈</h1>
     <hr />
-    <!-- Movie Question -->
-    <form id="movie-form">
+    <!-- one Question -->
+    <form id="cat-form">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        Do you like cats?
+        <select id="one-answer">
+          <option value="answer1">yes!😼</option>
+          <option value="answer2">nah😌</option>
+          <option value="answer3">ew🤮</option>
+          <option value="answer4">frick no😐 </option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
     </form>
-    <div id="movie-result"></div>
+    <div id="one-result"></div>
     <hr />
-    <!-- Book Question -->
-    <form id="book-form">
+    <!-- two Question -->
+    <form id="two-form">
       <label>
-        📖 What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+        Why do u like cats??
+        <select id="two-answer">
+          <option value="choice1">cos theyre the best duh</option>
+          <option value="choice2">i dont??</option>
+          <option value="choice3">i said no😤</option>
+          <option value="choice4">cats suck man</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
-    <div id="book-result"></div>
+    <div id="two-result"></div>
+       <img id="one" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHAvcoHzikhnnMSVUZB2FaIl_wIoD-xmx9Pw&s" width="200" style="display: none">
+    <img id="two" src="https://m.media-amazon.com/images/I/61BJCGItjvL.jpg" width="162" style="display: none">
+    <img id="three" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHeRvjounMTQlobDPY-nGJ0e3jBXnaM-Kt0g&s" width="162" style= "display: none">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
     <script>
+      $("#one").slideDown("2000");
+      $("#two").slideDown("2000");
+      $("#three").slideDown("2000");
+      
+      $("h1").animate(
+      {
+       marginLeft: "20px",
+      fontSize: "3em"
+      }
+      )
       //Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      $("#cat-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#one-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
+        if (answer === "answer1") {
+          $("#one-result").text("hell yea!");
+   
         } else {
-          $("#movie-result").text("Try Again!");
+          $("#one-result").text("nor ur wrong")
         }
       });
 
       //Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
+      $("#two-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("#two-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
+        if (answer === "choice1") {
+          $("#two-result").text("yes diva💞");
         } else {
-          $("#book-result").text("Try Again!");
+          $("#two-result").text("ur lying. you love cats.");
         }
       });
+
     </script>
   </body>
 
